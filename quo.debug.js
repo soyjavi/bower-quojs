@@ -1,4 +1,4 @@
-/* QuoJS v2.3.0 - 1/24/2013
+/* QuoJS v2.3.0 - 1/28/2013
    http://quojs.tapquo.com
    Copyright (c) 2013 Tapquo S.L. - Licensed MIT */
 
@@ -208,10 +208,9 @@ window.Quo = Quo;
     Android: /(Android)\s+([\d.]+)/,
     ipad: /(iPad).*OS\s([\d_]+)/,
     iphone: /(iPhone\sOS)\s([\d_]+)/,
-    blackberry: /(BlackBerry).*Version\/([\d.]+)/,
-    blackberryPlaybook: /(PlayBook).*Version\/([\d.]+)/,
-    firefoxOS: /(Mozilla).*Mobile[^\/]*\/([\d\.]*)/,
-    webos: /(webOS|hpwOS)[\s\/]([\d.]+)/
+    Blackberry: /(BlackBerry|BB10|Playbook).*Version\/([\d.]+)/,
+    FirefoxOS: /(Mozilla).*Mobile[^\/]*\/([\d\.]*)/,
+    webOS: /(webOS|hpwOS)[\s\/]([\d.]+)/
   };
   $$.isMobile = function() {
     _current = _current || _detectEnvironment();
