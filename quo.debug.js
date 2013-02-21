@@ -1,4 +1,4 @@
-/* QuoJS v2.3.1 - 2/4/2013
+/* QuoJS v2.3.2 - 2/21/2013
    http://quojs.tapquo.com
    Copyright (c) 2013 Javi Jimenez Villar (@soyjavi) - Licensed MIT */
 
@@ -448,6 +448,9 @@ window.Quo = Quo;
 
 (function($$) {
   $$.fn.attr = function(name, value) {
+    if (this.length === 0) {
+      null;
+    }
     if ($$.toType(name) === "string" && value === void 0) {
       return this[0].getAttribute(name);
     } else {
@@ -1001,10 +1004,12 @@ window.Quo = Quo;
   CURRENT_TOUCH = [];
   TOUCH_TIMEOUT = void 0;
   HOLD_DELAY = 650;
-  GESTURES = ["tap", "singleTap", "doubleTap", "hold", "swipe", "swiping", "swipeLeft", "swipeRight", "swipeUp", "swipeDown", "rotate", "rotating", "rotateLeft", "rotateRight", "pinch", "pinching", "pinchIn", "pinchOut", "drag", "dragLeft", "dragRight", "dragUp", "dragDown"];
+  GESTURES = ["touch", "tap", "singleTap", "doubleTap", "hold", "swipe", "swiping", "swipeLeft", "swipeRight", "swipeUp", "swipeDown", "rotate", "rotating", "rotateLeft", "rotateRight", "pinch", "pinching", "pinchIn", "pinchOut", "drag", "dragLeft", "dragRight", "dragUp", "dragDown"];
   GESTURES.forEach(function(event) {
     $$.fn[event] = function(callback) {
-      return $$(document.body).delegate(this.selector, event, callback);
+      var event_name;
+      event_name = event === "touch" ? "touchend" : event;
+      return $$(document.body).delegate(this.selector, event_name, callback);
     };
     return this;
   });
@@ -1083,6 +1088,7 @@ window.Quo = Quo;
   };
   _onTouchEnd = function(event) {
     var anyevent, drag_direction, pinch_direction, rotation_direction, swipe_direction;
+    _trigger("touch");
     if (GESTURE.fingers === 1) {
       if (GESTURE.taps === 2 && GESTURE.gap) {
         _trigger("doubleTap");
