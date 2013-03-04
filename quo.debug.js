@@ -1,4 +1,4 @@
-/* QuoJS v2.3.2 - 2/21/2013
+/* QuoJS v2.3.3 - 3/4/2013
    http://quojs.tapquo.com
    Copyright (c) 2013 Javi Jimenez Villar (@soyjavi) - Licensed MIT */
 
@@ -534,11 +534,21 @@ window.Quo = Quo;
     type = $$.toType(value);
     if (value || type === "number" || type === "string") {
       return this.each(function() {
+        var element, _i, _len, _results;
         if (type === "string" || type === "number") {
           return this.innerHTML = value;
         } else {
           this.innerHTML = null;
-          return this.appendChild(value);
+          if (type === "array") {
+            _results = [];
+            for (_i = 0, _len = value.length; _i < _len; _i++) {
+              element = value[_i];
+              _results.push(this.appendChild(element));
+            }
+            return _results;
+          } else {
+            return this.appendChild(value);
+          }
         }
       });
     } else {
@@ -737,7 +747,7 @@ window.Quo = Quo;
         if (serialize !== character) {
           serialize += "&";
         }
-        serialize += parameter + "=" + parameters[parameter];
+        serialize += "" + (encodeURIComponent(parameter)) + "=" + (encodeURIComponent(parameters[parameter]));
       }
     }
     if (serialize === character) {
