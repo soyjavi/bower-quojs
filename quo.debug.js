@@ -1,3 +1,6 @@
+/* QuoJS v2.3.6 - 2013/5/13
+   http://quojs.tapquo.com
+   Copyright (c) 2013 Javi Jimenez Villar (@soyjavi) - Licensed MIT */
 (function() {
   var Quo;
 
