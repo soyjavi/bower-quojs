@@ -5,8 +5,25 @@
   "homepage": "http://quojs.tapquo.com",
   "author": {
     "name": "Javi Jimenez Villar (@soyjavi)",
-    "site": "https://twitter.com/soyjavi"},
-  "main": ["quo.js"],
-  "keywords": [ "mobile" ],
-  "license": [{"type": "MIT"}]
+    "site": "https://twitter.com/soyjavi"
+  },
+  "main": "quo.js",
+  "keywords": [
+    "mobile"
+  ],
+  "license": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "authors": [
+    "@soyjavi <javi@tapquo.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
