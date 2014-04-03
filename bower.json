@@ -18,12 +18,5 @@
   ],
   "authors": [
     "@soyjavi <javi@tapquo.com>"
-  ],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
   ]
 }
