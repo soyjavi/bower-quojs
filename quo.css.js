@@ -1,4 +1,4 @@
-/* QuoJS v3.0.1 - 2014/1/24
+/* QuoJS v3.0.2 - 2014/4/10
    http://quojs.tapquo.com
    Copyright (c) 2014 Javi Jimenez Villar (@soyjavi) - Licensed MIT */
 (function(){"use strict";!function(a){var b,c;return b=["-webkit-","-moz-","-ms-","-o-",""],a.fn.addClass=function(a){return this.each(function(){return this.classList.add(a)})},a.fn.removeClass=function(a){return this.each(function(){return this.classList.remove(a)})},a.fn.toggleClass=function(a){return this.each(function(){var b;return b=this.classList.contains(a)?"remove":"add",this.classList[b](a)})},a.fn.hasClass=function(a){return this.length>0&&this[0].classList.contains(a)},a.fn.listClass=function(){return this.length>0?this[0].classList:void 0},a.fn.style=a.fn.css=function(a,b){var d;return null!=b?this.each(function(){return this.style[a]=b}):(d=this[0],d.style[a]||c(d,a))},a.fn.vendor=function(a,c){var d,e,f,g;for(g=[],e=0,f=b.length;f>e;e++)d=b[e],g.push(this.style(""+d+a,c));return g},c=function(a,b){return document.defaultView.getComputedStyle(a,"")[b]}}(Quo)}).call(this);

@@ -1,7 +1,7 @@
 {
   "name": "QuoJS",
   "description": "Micro #JavaScript Library for Mobile Devices",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "homepage": "http://quojs.tapquo.com",
   "author": {
     "name": "Javi Jimenez Villar (@soyjavi)",
@@ -19,4 +19,5 @@
   "authors": [
     "@soyjavi <javi@tapquo.com>"
   ]
+
 }
