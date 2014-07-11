@@ -1,4 +1,8 @@
-/* QuoJS v3.0.2 - 2014/4/10
-   http://quojs.tapquo.com
-   Copyright (c) 2014 Javi Jimenez Villar (@soyjavi) - Licensed MIT */
-(function(){"use strict";!function(a){var b,c;return b=["-webkit-","-moz-","-ms-","-o-",""],a.fn.addClass=function(a){return this.each(function(){return this.classList.add(a)})},a.fn.removeClass=function(a){return this.each(function(){return this.classList.remove(a)})},a.fn.toggleClass=function(a){return this.each(function(){var b;return b=this.classList.contains(a)?"remove":"add",this.classList[b](a)})},a.fn.hasClass=function(a){return this.length>0&&this[0].classList.contains(a)},a.fn.listClass=function(){return this.length>0?this[0].classList:void 0},a.fn.style=a.fn.css=function(a,b){var d;return null!=b?this.each(function(){return this.style[a]=b}):(d=this[0],d.style[a]||c(d,a))},a.fn.vendor=function(a,c){var d,e,f,g;for(g=[],e=0,f=b.length;f>e;e++)d=b[e],g.push(this.style(""+d+a,c));return g},c=function(a,b){return document.defaultView.getComputedStyle(a,"")[b]}}(Quo)}).call(this);
+/**
+ * QuoJS - Micro #JavaScript Library for Mobile Devices.
+ * @version v3.0.4
+ * @link    http://quojs.tapquo.com
+ * @author  Javi Jimenez Villar (@soyjavi) (https://twitter.com/soyjavi)
+ * @license MIT
+ */
+(function(){"use strict";!function(t){var n,s;return n=["-webkit-","-moz-","-ms-","-o-",""],t.fn.addClass=function(t){return this.each(function(){return this.classList.add(t)})},t.fn.removeClass=function(t){return this.each(function(){return this.classList.remove(t)})},t.fn.toggleClass=function(t){return this.each(function(){var n;return n=this.classList.contains(t)?"remove":"add",this.classList[n](t)})},t.fn.hasClass=function(t){return this.length>0&&this[0].classList.contains(t)},t.fn.listClass=function(){return this.length>0?this[0].classList:void 0},t.fn.style=t.fn.css=function(t,n){var i;return null!=n?this.each(function(){return this.style[t]=n}):(i=this[0],i.style[t]||s(i,t))},t.fn.vendor=function(t,s){var i,e,r,u;for(u=[],e=0,r=n.length;r>e;e++)i=n[e],u.push(this.style(""+i+t,s));return u},s=function(t,n){return document.defaultView.getComputedStyle(t,"")[n]}}(Quo)}).call(this);

@@ -1,4 +1,8 @@
-/* QuoJS v3.0.2 - 2014/4/10
-   http://quojs.tapquo.com
-   Copyright (c) 2014 Javi Jimenez Villar (@soyjavi) - Licensed MIT */
-(function(){"use strict";!function(a){return a.fn.attr=function(b,c){return this.length>0&&"string"===a.toType(b)?c?this.each(function(){return this.setAttribute(b,c)}):this[0].getAttribute(b):void 0},a.fn.removeAttr=function(b){return this.length>0&&"string"===a.toType(b)?this.each(function(){return this.removeAttribute(b)}):void 0},a.fn.data=function(a,b){return this.attr("data-"+a,b)},a.fn.removeData=function(a){return this.removeAttr("data-"+a)},a.fn.val=function(a){return null!=a?this.each(function(){return this.value=a.toString()}):this.length>0?this[0].value:null},a.fn.show=function(){return this.style("display","block")},a.fn.hide=function(){return this.style("display","none")},a.fn.offset=function(){var a,b;return this.length>0&&(a=this[0].getBoundingClientRect(),b={left:a.left+window.pageXOffset,top:a.top+window.pageYOffset,width:a.width,height:a.height}),b}}(Quo)}).call(this);
+/**
+ * QuoJS - Micro #JavaScript Library for Mobile Devices.
+ * @version v3.0.4
+ * @link    http://quojs.tapquo.com
+ * @author  Javi Jimenez Villar (@soyjavi) (https://twitter.com/soyjavi)
+ * @license MIT
+ */
+(function(){"use strict";!function(t){return t.fn.attr=function(n,e){return this.length>0&&"string"===t.toType(n)?e?this.each(function(){return this.setAttribute(n,e)}):this[0].getAttribute(n):void 0},t.fn.removeAttr=function(n){return this.length>0&&"string"===t.toType(n)?this.each(function(){return this.removeAttribute(n)}):void 0},t.fn.data=function(t,n){return this.attr("data-"+t,n)},t.fn.removeData=function(t){return this.removeAttr("data-"+t)},t.fn.val=function(t){return null!=t?this.each(function(){return this.value=t.toString()}):this.length>0?this[0].value:null},t.fn.show=function(){return this.style("display","block")},t.fn.hide=function(){return this.style("display","none")},t.fn.focus=function(){return this[0].focus()},t.fn.blur=function(){return this[0].blur()},t.fn.offset=function(){var t,n;return this.length>0&&(t=this[0].getBoundingClientRect(),n={left:t.left+window.pageXOffset,top:t.top+window.pageYOffset,width:t.width,height:t.height}),n}}(Quo)}).call(this);
