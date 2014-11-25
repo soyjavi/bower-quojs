@@ -1,6 +1,6 @@
 /**
  * QuoJS - Micro #JavaScript Library for Mobile Devices.
- * @version v3.0.4
+ * @version v3.0.6
  * @link    http://quojs.tapquo.com
  * @author  Javi Jimenez Villar (@soyjavi) (https://twitter.com/soyjavi)
  * @license MIT
