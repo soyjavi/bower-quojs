@@ -10,6 +10,7 @@
   "keywords": [
     "mobile"
   ],
+  "ignore": [],
   "repository": {
     "type": "git",
     "url": "git://github.com/soyjavi/bower-quojs.git"
