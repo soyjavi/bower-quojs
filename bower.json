@@ -1,15 +1,8 @@
 {
-  "name"        : "QuoJS",
+  "name"        : "quojs",
   "version"     : "3.0.7",
-  "description" : "Micro #JavaScript Library for Mobile Devices",
   "homepage"    : "http://quojs.tapquo.com",
-  "author"      : {
-    "name"      : "Javi Jimenez Villar",
-    "mail"      : "javi.jimenez.villar@gmail.com",
-    "twitter"   : "@soyjavi",
-    "site"      : "http://soyjavi.com" },
+  "description" : "Micro JavaScript Library for Mobile Devices",
   "main"        : "quo.js",
-  "ignore"      : [],
-  "license"     : "MIT",
-  "keywords"    : ["mobile", "gestures", "DOM", "jquery"],
+  "ignore"      : []
 }
